@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,900&display=swap"
+            rel="stylesheet">
+</head>
+<body>
+
+
+<main class="main">
+
+    <div class="container">
+
+        <div class="forms">
+
+
+			<form th:action="@{/register}" class="register" method="post">
+
+            <h2 class="title">Register</h2>
+
+            <div class="input__blog">
+                <i class="fas fa-name"></i> <input id="fullname" name="fullName" type="text" placeholder="Full name" required>
+            </div>
+
+            <div class="input__blog">
+                <i class="fas fa-user"></i> <input id="username" name="userName" type="text" placeholder="Username" required>
+            </div>
+
+            <div class="input__blog">
+                <i class="fas fa-envelope"></i> <input id="email" name="email" type="email" placeholder="e-mail" required>
+            </div>
+
+            <div class="input__blog">
+                <i class="fas fa-phone"></i> <input id="number" name="number" type="text" placeholder="Phone number" required>
+            </div>
+
+            <div class="input__blog">
+                <i class="fas fa-lock"></i> <input id="password" name="password" type="password" placeholder="Password" required>
+            </div>
+
+            <input type="submit" value="Register" class="btn login" th:onclick="validateform2()">
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+</main>
+
+
+
+<script th:src="@{js/script.js}"></script>
+
+</body>
+</html>
